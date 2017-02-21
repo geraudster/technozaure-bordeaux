@@ -35,3 +35,8 @@ node_modules
 dist/
 .tmp
 #app.yaml
+.DS_Store
+google-cloud-sdk/
+tz-bordeaux-0805b5cdf0c5.json
+
+

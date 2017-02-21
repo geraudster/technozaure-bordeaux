@@ -1,6 +1,6 @@
 machine:
   environment:
-    APPNAME: my-app
+      APPNAME: my-app
     VERSION: v1
 
 dependencies:

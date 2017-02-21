@@ -31,7 +31,7 @@
       "type": "repas",
       "image": "/images/agenda/eat.png",
       "track": "Technozaure",
-      "agenda" : { "day": 1, "hour": 8, "room": 8 }
+      "agenda" : { "day": 1, "hour": 8, "room": 1 }
     },{
       "id": 4,
       "name": "Pause",
@@ -88,7 +88,7 @@
       "speaker": [
         5
       ],
-      "agenda" : { "day": 1, "hour": 5, "room": 4 }
+      "agenda" : { "day": 1, "hour": 5, "room": 1 }
     },
     {
       "id": 6,
@@ -112,7 +112,7 @@
       "speaker": [
         7
       ],
-      "agenda" : { "day": 1, "hour": 7, "room": 2 }
+      "agenda" : { "day": 1, "hour": 7, "room": 1 }
     },
     {
       "id": 9,
@@ -124,7 +124,7 @@
       "speaker": [
         9
       ],
-      "agenda" : { "day": 1, "hour": 9, "room": 5 }
+      "agenda" : { "day": 1, "hour": 9, "room": 1 }
     },
     {
       "id": 11,
