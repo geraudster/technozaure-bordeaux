@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <!-- inject:head:html -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Team @ GDG Nantes">
+<meta name="description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="keywords" content="event, gdg, devfest, google, programming, android, chrome, developers, nantes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevFest 2016 Nantes</title>
+
+<!-- Disable tap highlight on IE -->
+<meta name="msapplication-tap-highlight" content="no">
+
+<!-- Web Application Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- favicon -->
+<link rel="icon" type="image/png" href="/favicon.ico" />
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="DevFest Nantes 2016">
+<link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="DevFest Nantes 2016">
+<link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#2b5797">
+
+<!-- Color the status bar on mobile devices -->
+<meta name="theme-color" content="#2b5797">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@devfestnantes">
+<meta name="twitter:title" content="DevFest Nantes 2016">
+<meta name="twitter:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="twitter:image:src" content="https://devfest.gdgnantes.com/images/sharing.png">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:title" content="DevFest Nantes 2016" />
+<meta property="og:site_name" content="DevFest Nantes 2016" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://devfest.gdgnantes.com" />
+<meta property="og:image" content="https://devfest.gdgnantes.com/images/sharing.png" />
+<meta property="og:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes" />
+
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<link rel="canonical" href="https://devfest.gdgnantes.com">
+
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
+<!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
+<link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+
+<!-- Material Design icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+
+<!-- Your styles -->
+<link rel="stylesheet" href="/styles/app-56e8985aea.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
+<script src="/scripts/material-d8f93ed01e.min.js"></script>
+<!--<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
+
+<script>
+  var language = 'fr'
+</script>
+
+    <!-- endinject -->
+  </head>
+
+  <body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <!-- inject:menu:html -->
+    <header class="devfest-header mdl-layout__header mdl-layout__header--seamed">
+  <div class="mdl-layout__header-row">
+    <span class="devfest-title mdl-layout-title">
+      <a href="index.html"><img class="devfest-logo-image" src="/images/logo-title-white.png"></a>
+    </span>
+    <!-- Add spacer, to align navigation to the right in desktop -->
+    <div class="devfest-header-spacer mdl-layout-spacer"></div>
+    <!-- Bar Navigation -->
+    <div class="devfest-navigation-container">
+      <nav class="devfest-navigation mdl-navigation">
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./agenda.html">Agenda</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./speakers.html">Speakers</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./pratique.html">Pratique</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./team.html">L'équipe</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./faq.html">FAQ</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" id="show-connect">Se connecter</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase btn-disconnect-social" id="show-disconnect">Se déconnecter</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/en/index.html"><img class="devfest-header-lang"src="/images/flags/en.png"></a>
+      </nav>
+    </div>
+    <span class="devfest-mobile-title mdl-layout-title">
+      <a href="index.html"><img class="devfest-logo-image" src="/images/logo-title-white.png"></a>
+    </span>
+    <button class="devfest-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+      <li class="mdl-menu__item"><a href="./cod.html" class="devfest-menu-links">Code de conduite</a></li>
+      <li class="mdl-menu__item"><a href="./credits.html" class="devfest-menu-links">Crédits</a></li>
+      <li class="mdl-menu__item"><a href="./presse.html" class="devfest-menu-links">Presse</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- LEFT navigation -->
+<div class="devfest-drawer mdl-layout__drawer">
+  <span class="mdl-layout-title">
+    <div class="devfest-drawer-title">
+      9-10 Nov. 2016<br/>
+      <span>Cité de congrès</br>Nantes, Fr</span>
+    </div>
+    <a href="index.html">
+      <img class="devfest-logo-image" src="/images/logo-title-white.png">
+    </a>
+  </span>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="./agenda.html">Agenda</a>
+    <a class="mdl-navigation__link" href="./speakers.html">Speakers</a>
+    <a class="mdl-navigation__link" href="./pratique.html">Pratique</a>
+    <a class="mdl-navigation__link" href="./team.html">L'équipe</a>
+    <a class="mdl-navigation__link" href="./faq.html">FAQ</a>
+    <a class="mdl-navigation__link" href="./cod.html">Code de conduite</a>
+    <a class="mdl-navigation__link" href="./credits.html">Crédits</a>
+    <a class="mdl-navigation__link" href="./presse.html">Presse</a>
+    <a class="mdl-navigation__link" id="show-connect2">Se connecter</a>
+    <a class="mdl-navigation__link btn-disconnect-social" id="show-disconnect2">Se déconnecter</a>
+    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/en/index.html"><img class="devfest-header-lang" src="/images/flags/en.png"></a>
+  </nav>
+</div>
+
+<dialog class="mdl-dialog">
+  <div class="mdl-dialog__content">
+    <p>
+      En vous connectant avec votre compte, vous pourrez sauvegarder vos sessions favorites, elles seront alors synchronisées sur tous vos devices.
+    </p>
+    <p>
+      <button class="btn-google btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="google">
+        Connect with Google
+      </button>
+    </p>
+    <p>
+      <button class="btn-twitter btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="twitter">
+        Connect with Twitter
+      </button>
+    </p>
+    <p>
+      <button class="btn-github btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="github">
+        Connect with Github
+      </button>
+    </p>
+    <p>
+      <button class="btn-facebook btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="facebook">
+        Connect with Facebook
+      </button>
+    </p>
+  </div>
+  <div class="mdl-dialog__actions">
+    <button type="button" class="mdl-button close">Annuler</button>
+  </div>
+</dialog>
+
+    <!-- endinject -->
+
+      <div class="devfest-ribbon devfest-ribbon-pratique"></div>
+      <main class="devfest-ribbon-main devfest-ribbon-main-pratique mdl-layout__content">
+        <div class="devfest-ribbon-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="devfest-ribbon-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <div class="devfest-ribbon-crumbs mdl-color-text--grey-500">
+              Devfest Nantes 2016 &gt; Pratique
+            </div>
+            <h3><i class="material-icons">explore</i>&nbsp;&nbsp;Où se trouve l'évènement ?</h3>
+
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--8-col">
+                <div  id="map" style="width:100%;height: 200px"></div>
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <h5>Cité de Congrès, Nantes</h5>
+                <p>
+                  5 rue de Valmy,
+                  <br> 44041 Nantes
+                  <br><a href="https://www.google.fr/maps/place/La+Cit%C3%A9/@47.2129658,-1.5425652,15z/data=!4m2!3m1!1s0x0:0xede2746ae20dfebf" target="_NEW">Lien Google Maps</a>
+                </p>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-cell--hide-phone" href="#indoor_map">
+                  <i class="material-icons">explore</i>&nbsp;Plan des salles
+                </a>
+              </div>
+            </div>
+
+            <h3><i class="material-icons">directions</i>&nbsp;&nbsp;Comment s'y rendre ?</h3>
+              <h4><i class="material-icons">directions_train</i>&nbsp;&nbsp;En train</h4>
+              <a name="directions"></a>
+              <p>
+                Nantes est à seulement 2h de Paris (Gare Montparnasse) en TGV.
+                <br/>
+                Arrivé(e) à Nantes, prenez la sortie 'Gare Sud' : vous serez à la Cité des Congrès en moins de 10 minutes à pied.
+              </p>
+              <h4><i class="material-icons">directions_subway</i>&nbsp;&nbsp;En tramway</h4>
+              <p>
+                <b>En tramway</b>, prenez la ligne 1 : station 'Duchesse Anne - Château des Ducs de Bretagne' (à une station de la gare TGV (sortie Nord)). La cité des Congrès est alors à 5 minutes à pied.
+                <br/>
+                <b>En busway</b>, prenez la ligne 4 du busway et descendez à l'arrêt 'Cité des Congrès'.
+              </p>
+              <h4><i class="material-icons">directions_car</i>&nbsp;&nbsp;En voiture</h4>
+              <p>
+                La Cité des Congrès étant en plein centre ville, nous préconisons aux automobilistes de se garer sur un parking relais tram ou un parking payant.
+                <br/>
+                La Cité des Congrès propose un <a href="http://www.parkings-nantes.fr/fr/stationner" target="_NEW">parking payant</a> de 450 places.
+                <br/>
+                Liste des parkings relais : <a href="https://plan-tan.fr/?lat=47.215837000000015&lng=-1.550499000000003&zoom=12" target="_NEW">carte interactive</a> ou sur le site de la <a href="https://www.tan.fr/fr/menu/se-deplacer/tan/plans/" target="_NEW">Tan</a>.
+              </p>
+              <h4><i class="material-icons">flight</i>&nbsp;&nbsp;En avion</h4>
+              <p>
+                L'aéroport est situé à l'extérieur de la ville. Pour accéder à la Cité des Congrès, vous pouvez utiliser les <a href="http://www.nantes.aeroport.fr/acces/navettes" target="_NEW">navettes</a> (20 min), les taxis ou louer une voiture.
+              </p>
+
+              <h3><i class="material-icons">hotel</i>&nbsp;&nbsp;Comment se loger ?</h3>
+              <a name="hotel"></a>
+              <p>
+                L'équipe du DevFest Nantes a négocier des prix auprès des hôtels <b>Residhome</b> et <b>Belfort</b> pour les participants de l'évènement
+              </p>
+              <p>
+                <b>Hôtel Residhome</b>
+                <br/>3 allée Jacques Berque
+                <br/>44000 Nantes
+                <br/>Situé juste en face de la Cité des Congrès, le Residhome les Berges de la Loire vous propose des tarifs négociés avec le code « DEVFEST 2016 ».
+                <br/><a href="https://www.google.fr/maps/place/Residhome+Nantes+Berges+de+la+Loire/@47.2122877,-1.5388464,15z/data=!4m2!3m1!1s0x0:0x2b56e1873da0f956" target="_NEW">Lien Google Maps</a>
+              </p>
+              <p>
+                97.50€ la nuit entre le 8 et 10 novembre 2016 (Studio standard single, incluant petit déjeuner buffet américain)
+                <br/>Réservation : <a href="mailto:morgane.baudry@reside-etudes.fr">morgane.baudry@reside-etudes.fr</a> et <a href="mailto:corinne.lallemand@reside-etudes.fr">corinne.lallemand@reside-etudes.fr</a> ou <a href="tel:+33240990707">(+33)2 40 99 07 07</a>
+              </p>
+
+              <p>
+                <b>Hôtel Belfort*** Nantes Cité des Congrès</b>
+                <br/>1, rue de Belfort
+                <br/>44000 Nantes
+                <br/>Situé a quelques rues de la Cité des Congrès, l'Hôtel Belfort vous propose des tarifs négociés avec le code de réservation « DEVFEST 2016 ».
+                <br/><a href="https://www.google.fr/maps/place/H%C3%B4tel+Belfort+Nantes/@47.2112022,-1.5466541,17z/data=!4m13!1m7!3m6!1s0x4805eeb0d58605b7:0xd2a16997d08eec26!2s1+Rue+de+Belfort,+44000+Nantes!3b1!8m2!3d47.2112022!4d-1.5444654!3m4!1s0x4805eeb0d618b52f:0x53ac735bb0640acc!8m2!3d47.2112177!4d-1.5445377" target="_NEW">Lien Google Maps</a>
+              </p>
+              <p>
+                88.30€ la nuit entre le 8 et 10 novembre 2016 (Chambre standard grand lit avec un petit déjeuner inclus)
+                <br/>Réservation : <a href="http://www.hotel-belfort-nantes.fr/" target="_NEW">hotel-belfort-nantes.fr</a> ou <a href="tel:+33240470557">(+33)2 40 47 05 57</a>
+              </p>
+
+              <div class="mdl-cell--hide-phone">
+                <a name="indoor_map"></a>
+                <h3><i class="material-icons">explore</i>&nbsp;&nbsp;Plan des salles</h3>
+                <img class="simple-padding-bottom" src="/images/cite/indoor_map.png">
+              </div>
+              <!-- inject:platiniums:html -->
+              <!-- SECTION SPONSORS -->
+<section class="devfest-sponsors mdl-grid ">
+  <div class="">
+    <div class="devfest-sponsors-text  mdl-typography--display-1 mdl-typography--text-center">Sponsors Platinium</div>
+    <div class="mdl-grid devfest-sponsors-platinium">
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="https://www.google.com" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/google.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.epitech.eu/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/epitech.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.zenika.com/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/zenika.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.sqli.com/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/sqli.png" ></a>
+      </div>
+    </div>
+    <div class="mdl-grid devfest-sponsors-platinium">
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.conserto.pro/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/conserto.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.soprasteria.com/fr" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/sopra.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.groupe-creative.fr/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/creative.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.neo-soft.fr/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/neosoft.png" ></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+              <!-- endinject -->
+          </div>
+        </div>
+
+
+        <!-- inject:footer:html -->
+     <footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Qui sommes-nous ?</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="http://www.zenika.com" target="_NEW">Zenika Nantes</a></li>
+      </ul>
+    </div>
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Retrouvez Zenika Nantes sur</h1>
+      <span class="mdl-mega-footer__link-list">
+          <a href="https://twitter.com/ZenikaNantes" class="devfest-footer-social" title="Twitter" target="_NEW">
+            <img src="/images/social/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/ZenikaIT" class="devfest-footer-social" title="Facebook" target="_NEW">
+            <img src="/images/social/facebook.png">
+          </a>
+          <a href="https://www.youtube.com/playlist?list=PLbf9DSLhCPwQ8l2EUXbG0p54U2CSeCbS-" class="devfest-footer-social" title="YouTube" target="_NEW">
+            <img src="/images/social/youtube.png">
+          </a>
+      </span>
+    </div>
+  
+  </div>
+
+</footer>
+     <!-- endinject -->
+
+
+
+      </main>
+
+    <script src="https://npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script async src="/scripts/main-a37c119485.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-35116426-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyACfHSzG30jmydm6XXqA5J5YmGEwkAuie0"></script>
+    <script>
+        (function() {
+          var myLatLng = {lat: 47.212966, lng: -1.542565};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 14
+          });
+          // Create a marker and set its position.
+          var marker = new google.maps.Marker({
+            map: map,
+            position: myLatLng
+          });
+        })();
+    </script>
+
+     <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>

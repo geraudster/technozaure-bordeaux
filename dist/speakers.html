@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <!-- inject:head:html -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Team @ GDG Nantes">
+<meta name="description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="keywords" content="event, gdg, devfest, google, programming, android, chrome, developers, nantes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevFest 2016 Nantes</title>
+
+<!-- Disable tap highlight on IE -->
+<meta name="msapplication-tap-highlight" content="no">
+
+<!-- Web Application Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- favicon -->
+<link rel="icon" type="image/png" href="/favicon.ico" />
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="DevFest Nantes 2016">
+<link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="DevFest Nantes 2016">
+<link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#2b5797">
+
+<!-- Color the status bar on mobile devices -->
+<meta name="theme-color" content="#2b5797">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@devfestnantes">
+<meta name="twitter:title" content="DevFest Nantes 2016">
+<meta name="twitter:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="twitter:image:src" content="https://devfest.gdgnantes.com/images/sharing.png">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:title" content="DevFest Nantes 2016" />
+<meta property="og:site_name" content="DevFest Nantes 2016" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://devfest.gdgnantes.com" />
+<meta property="og:image" content="https://devfest.gdgnantes.com/images/sharing.png" />
+<meta property="og:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes" />
+
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<link rel="canonical" href="https://devfest.gdgnantes.com">
+
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
+<!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
+<link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+
+<!-- Material Design icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+
+<!-- Your styles -->
+<link rel="stylesheet" href="/styles/app-56e8985aea.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
+<script src="/scripts/material-d8f93ed01e.min.js"></script>
+<!--<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
+
+<script>
+  var language = 'fr'
+</script>
+
+    <!-- endinject -->
+  </head>
+
+  <body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <main id="speakersVue" class="devfest-ribbon-main mdl-layout__content">
+      <div class="devfest-ribbon">
+        <img src="/images/tz-logo.png" />
+      </div>
+      <div class="devfest-ribbon-container mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="devfest-ribbon-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+          <div class="devfest-ribbon-crumbs mdl-color-text--grey-500">
+            Technozaure Nantes &gt; Speakers
+          </div>
+            <h6>
+              <b>{{ speakers.length }} speakers</b> participent à cette 2ème édition 2016.
+            </h6>
+
+            <div class="mdl-grid devfest-speakers-list">
+              <speaker-card v-for="speaker in speakers" :speaker="speaker"></speaker-card>
+            </div>
+
+        </div>
+      </div>
+
+       <!-- inject:footer:html -->
+       <footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Qui sommes-nous ?</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="http://www.zenika.com" target="_NEW">Zenika Nantes</a></li>
+      </ul>
+    </div>
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Retrouvez Zenika Nantes sur</h1>
+      <span class="mdl-mega-footer__link-list">
+          <a href="https://twitter.com/ZenikaNantes" class="devfest-footer-social" title="Twitter" target="_NEW">
+            <img src="/images/social/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/ZenikaIT" class="devfest-footer-social" title="Facebook" target="_NEW">
+            <img src="/images/social/facebook.png">
+          </a>
+          <a href="https://www.youtube.com/playlist?list=PLbf9DSLhCPwQ8l2EUXbG0p54U2CSeCbS-" class="devfest-footer-social" title="YouTube" target="_NEW">
+            <img src="/images/social/youtube.png">
+          </a>
+      </span>
+    </div>
+  
+  </div>
+
+</footer>
+       <!-- endinject -->
+
+    </main>
+
+
+    <script src="https://npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script async src="/scripts/main-a37c119485.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-35116426-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+     <!-- Built with love using Web Starter Kit -->
+  </body>
+</html>

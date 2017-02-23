@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="La Technozaure c'est une journée de conférences internes Zenika">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technozaure Zenika Bordeaux</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <!-- Social: Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ZenikaBordeaux">
+    <meta name="twitter:title" content="Technozaure Zenika Bordeaux 2017">
+    <meta name="twitter:description" content="La Technozaure c'est une journée de conférences internes Zenika">
+    <meta name="twitter:image:src" content="https://tz-bordeaux.appspot.com/images/sharing.png">
+
+    <!-- Social: Facebook / Open Graph -->
+    <meta property="og:title" content="Technozaure Zenika Bordeaux 2017" />
+    <meta property="og:site_name" content="Technozaure Zenika Bordeaux 2017" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tz-bordeaux.appspot.com" />
+    <meta property="og:image" content="https://tz-bordeaux.appspot.com/images/sharing.png" />
+    <meta property="og:description" content="La Technozaure c'est une journée de conférences internes Zenika" />
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <link rel="canonical" href="https://tz-bordeaux.appspot.com">
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
+    <!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
+    <link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+
+    <!-- Material Design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="/styles/app-56e8985aea.css">
+
+    <script src="/scripts/material-d8f93ed01e.min.js"></script>
+
+
+  </head>
+
+  <body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <main id="agendaVue" class="devfest-ribbon-main mdl-layout__content">
+      <div class="devfest-ribbon">
+        <img src="/images/tz-logo.png" />
+      </div>
+      <div class="devfest-ribbon-container mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+        <div class="devfest-ribbon-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+          <div class="devfest-ribbon-crumbs mdl-color-text--grey-500">
+            Technozaure Bordeaux &gt; Agenda
+          </div>
+
+          <div style="display:flex;">
+            <div style="display:flex;flex-direction:column;margin-right: 50px;" class="mdl-cell--hide-phone">
+              <h6>Jours</h6>
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="day1">
+                <input type="checkbox" id="day1" value="day1" v-model="day1" class="mdl-checkbox__input">
+                <span class={{this.getTypeColor('day1')}}>Vendredi 28 Octobre</span>
+              </label>
+            </div>
+            <div style="display:flex;flex-direction:column;margin-right: 50px;" class="mdl-cell--hide-phone">
+              <h6>Type de session</h6>
+              <label v-for="filter in typeFilters" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for={{filter}}>
+                <input type="checkbox" id={{filter}} value={{filter}} v-model="curTypeFilters" class="mdl-checkbox__input">
+                <span class={{this.getTypeColor(filter)}}>{{filter}}</span>
+              </label>
+            </div>
+            <div style="display:flex;flex-direction:column;margin-right: 50px;" class="mdl-cell--hide-phone">
+              <h6>Track</h6>
+              <label v-for="filter in trackFilters" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for={{filter}}>
+                <input type="checkbox" id={{filter}} value={{filter}} v-model="curTrackFilters" class="mdl-checkbox__input">
+                <span class={{this.getTrackColor(filter)}}>{{filter}}</span>
+              </label>
+            </div>
+            <div style="display:flex;flex-direction:column">
+              <h6>Favoris</h6>
+              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="favorites">
+                <input type="checkbox" id="favorites" value="favorites" v-model="curFavoriteFilter" class="mdl-checkbox__input">
+                <span class="devfest-favorite-active"><i class="material-icons">favorite</i></span>
+              </label>
+            </div>
+
+          </div>
+
+          <h4 v-if="day1 || (!day1 && !day2)">Vendredi 28 Octobre 2016</h4>
+          <agenda  v-if="day1 || (!day1 && !day2)" day="1" :hours="agenda.day1" :sessions="displayedSessions" :favorites="favorites"></agenda>
+
+      </div>
+      </div>
+
+      <!-- inject:footer:html -->
+      <footer class="mdl-mega-footer">
+  <div class="mdl-mega-footer__middle-section">
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Qui sommes-nous ?</h1>
+      <ul class="mdl-mega-footer__link-list">
+        <li><a href="http://www.zenika.com" target="_NEW">Zenika Nantes</a></li>
+      </ul>
+    </div>
+  
+    <div class="mdl-mega-footer__drop-down-section">
+      <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+      <h1 class="mdl-mega-footer__heading">Retrouvez Zenika Nantes sur</h1>
+      <span class="mdl-mega-footer__link-list">
+          <a href="https://twitter.com/ZenikaNantes" class="devfest-footer-social" title="Twitter" target="_NEW">
+            <img src="/images/social/twitter.png">
+          </a>
+          <a href="https://www.facebook.com/ZenikaIT" class="devfest-footer-social" title="Facebook" target="_NEW">
+            <img src="/images/social/facebook.png">
+          </a>
+          <a href="https://www.youtube.com/playlist?list=PLbf9DSLhCPwQ8l2EUXbG0p54U2CSeCbS-" class="devfest-footer-social" title="YouTube" target="_NEW">
+            <img src="/images/social/youtube.png">
+          </a>
+      </span>
+    </div>
+  
+  </div>
+
+</footer>
+      <!-- endinject -->
+
+
+    </main>
+
+    <script src="https://npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <script async src="/scripts/main-a37c119485.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <!-- inject:head:html -->
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Team @ GDG Nantes">
+<meta name="description" content="DevFest Nantes 2016, is a two day event of conferences with 1000 developers a the Congress center of Nantes">
+<meta name="keywords" content="event, gdg, devfest, google, programming, android, chrome, developers, nantes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevFest 2016 Nantes</title>
+
+<!-- Disable tap highlight on IE -->
+<meta name="msapplication-tap-highlight" content="no">
+
+<!-- Web Application Manifest -->
+<link rel="manifest" href="manifest.json">
+
+<!-- favicon -->
+<link rel="icon" type="image/png" href="/favicon.ico" />
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Web Starter Kit">
+<link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+<link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#2b5797">
+
+<!-- Color the status bar on mobile devices -->
+<meta name="theme-color" content="#2b5797">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@devfestnantes">
+<meta name="twitter:title" content="DevFest Nantes 2016">
+<meta name="twitter:description" content="DevFest Nantes 2016, is a two day event of conferences with 1000 developers a the Congress center of Nantes">
+<meta name="twitter:image:src" content="https://devfest.gdgnantes.com/images/sharing.png">
+
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:title" content="DevFest Nantes 2016" />
+<meta property="og:site_name" content="DevFest Nantes 2016" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://devfest.gdgnantes.com" />
+<meta property="og:image" content="https://devfest.gdgnantes.com/images/sharing.png" />
+<meta property="og:description" content="DevFest Nantes 2016, is a two day event of conferences with 1000 developers a the Congress center of Nantes" />
+
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<link rel="canonical" href="https://devfest.gdgnantes.com">
+
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
+<!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
+<link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+
+<!-- Material Design icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+
+<!-- Your styles -->
+<link rel="stylesheet" href="/styles/app-56e8985aea.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
+<script async src="https://npmcdn.com/vue@1.0.26/dist/vue.min.js"></script>
+<script src="/scripts/material-d8f93ed01e.min.js"></script>
+<!--<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
+
+<script>
+  var language = 'en'
+</script>
+
+  <!-- endinject -->
+</head>
+
+<body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+  <!-- inject:menu:html -->
+  <header class="devfest-header mdl-layout__header mdl-layout__header--seamed">
+  <div class="mdl-layout__header-row">
+    <span class="devfest-title mdl-layout-title">
+      <a href="index.html"><img class="devfest-logo-image" src="/images/logo-title-white.png"></a>
+    </span>
+    <!-- Add spacer, to align navigation to the right in desktop -->
+    <div class="devfest-header-spacer mdl-layout-spacer"></div>
+    <!-- Bar Navigation -->
+    <div class="devfest-navigation-container">
+      <nav class="devfest-navigation mdl-navigation">
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./agenda.html">Agenda</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./speakers.html">Speakers</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./pratique.html">Logistics</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./team.html">Team</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="./faq.html">FAQ</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" id="show-connect">Connect</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase btn-disconnect-social" id="show-disconnect">Disconnect</a>
+        <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/"><img class="devfest-header-lang"src="/images/flags/fr.png"></a>
+      </nav>
+    </div>
+    <span class="devfest-mobile-title mdl-layout-title">
+      <a href="index.html"><img class="devfest-logo-image" src="/images/logo-title-white.png"></a>
+    </span>
+    <button class="devfest-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+      <i class="material-icons">more_vert</i>
+    </button>
+    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+      <li class="mdl-menu__item"><a href="./cod.html" class="devfest-menu-links">Code of conduct</a></li>
+      <li class="mdl-menu__item"><a href="./credits.html" class="devfest-menu-links">Credits</a></li>
+      <li class="mdl-menu__item"><a href="./presse.html" class="devfest-menu-links">Press</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- LEFT navigation -->
+<div class="devfest-drawer mdl-layout__drawer">
+  <span class="mdl-layout-title">
+    <div class="devfest-drawer-title">
+      9-10 Nov. 2016<br/>
+      <span>Cité de congrès</br>Nantes, Fr</span>
+    </div>
+    <a href="index.html">
+      <img class="devfest-logo-image" src="/images/logo-title-white.png">
+    </a>
+  </span>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="./agenda.html">Agenda</a>
+    <a class="mdl-navigation__link" href="./speakers.html">Speakers</a>
+    <a class="mdl-navigation__link" href="./pratique.html">Logistics</a>
+    <a class="mdl-navigation__link" href="./team.html">Team</a>
+    <a class="mdl-navigation__link" href="./faq.html">FAQ</a>
+    <a class="mdl-navigation__link" href="./cod.html">Code of conduct</a>
+    <a class="mdl-navigation__link" href="./credits.html">Credits</a>
+    <a class="mdl-navigation__link" href="./presse.html">Press</a>
+    <a class="mdl-navigation__link" id="show-connect2">Connect</a>
+    <a class="mdl-navigation__link btn-disconnect-social" id="show-disconnect2">Disconnect</a>
+    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="/"><img class="devfest-header-lang" src="/images/flags/fr.png"></a>
+  </nav>
+</div>
+
+<dialog class="mdl-dialog">
+  <div class="mdl-dialog__content">
+    <p>
+      <button class="btn-google btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="google">
+        Connect with Google
+      </button>
+    </p>
+    <p>
+      <button class="btn-twitter btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="twitter">
+        Connect with Twitter
+      </button>
+    </p>
+    <p>
+      <button class="btn-github btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="github">
+        Connect with Github
+      </button>
+    </p>
+    <p>
+      <button class="btn-facebook btn-connect-social mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-social="facebook">
+        Connect with Facebook
+      </button>
+    </p>
+  </div>
+  <div class="mdl-dialog__actions">
+    <button type="button" class="mdl-button close">Close</button>
+  </div>
+</dialog>
+
+  <!-- endinject -->
+
+  <div class="devfest-ribbon"></div>
+  <main class="devfest-ribbon-main mdl-layout__content">
+    <div class="devfest-ribbon-container mdl-grid">
+      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+      <div class="devfest-ribbon-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+        <div class="devfest-ribbon-crumbs mdl-color-text--grey-500">
+          Devfest Nantes 2016 &gt; Frequently Asked Questions
+        </div>
+        <h3>What is the DevFest?</h3>
+        <p>
+	  The DevFests are major community events throughout the world, following the tradition of Google Developer Days and organized by local user groups. They constitute a unique opportunity to share and network around the World of Web and cloud technologies! This event will be followed by an after-event party to discuss and network!
+        </p>
+        <h3>Who is organizing this event?</h3>
+        <p>
+	  The DevFest Nantes in 2016 is organized by <a href="http://gdgnantes.com" target="_blank">GDG Nantes</a>. More information on the <a href="./team.html" target="_blank">Team</a> page.
+        </p>
+        <h3>How to become a sponsor or partner?</h3>
+        <p>
+	  Simply by visiting our <a href="https://drive.google.com/open?id=0Bx5mRU2mXdx0R2U4Q3ZJR284dkk" target="_blank">partnership</a> site, or by contacting us by mail at <a href="mailto:bureau@gdgnantes.com">organizers of GDG Nantes</a>.
+        </p>
+        <h3>Where can I leave my luggage?</h3>
+        <p>
+	  Although the event is over several days, we do not allow participants to leave their luggage at the event. Cloakroom service is available free during the 2 days to deposit backpacks and jackets.
+        </p>
+        <h3>How to get there?</h3>
+        <p>
+	  All information relating to the arrival in DevFest is available on the <a href="./pratique.html">Information</a> page.
+        </p>
+        <h3>Is there discounted tickets?</h3>
+        <p>
+          The discounted rate is applicable only in the following categories:
+          <ul>
+	    <li>Students</li>
+	    <li>Teachers</li>
+	    <li>In-between jobs</li>
+	    <li>Unemployed</li>
+          </ul>
+	  In all cases, access to the discounted rate will be available only on providing justification proof. In case of breach of these rules, the participant will be asked to pay the difference or not to attend the event. No refund will be provided.
+        </p>
+        <h3>How will the DevFest be organised?</h3>
+        <p>
+	  This 2-days event will include three types of sessions: Conferences (50 minutes), Quickies events (20 minutes) and Codelabs (2 hours).
+	  Conferences and Quickies talks will be presentations by renowned speakers or Googlers evoking their favorite technologies.
+	  The Codelabs are more informal and will be an opportunity to put your hands (and feet) to work on code in the company of a technology expert in the field.
+        </p>
+        <h3>What are the topics?</h3>
+        <p> The topics will be based on four themes:
+          <ul>
+            <li><strong>IoT & Mobile</strong>: Topics on the connected objects and mobility</li>
+            <li><strong>Web</strong>: Topics on javascript frameworks or new HTML5</li>
+            <li><strong>Cloud & Big Data</strong>: Topics on cloud infrastructures such AppEngine, ComputeEngine and elastic backend technologies</li>
+            <li><strong>Discovery</strong>: Topics relating to new uses of IT, new technologies, and even on the UX</li>
+          </ul>
+        </p>
+        <h3>How to register and how much does it cost?</h3>
+        <p>
+	  Registration for DevFest Nantes can be done directly from this site by clicking the link on the home page. Admission is € 70 for the 2-day pass, € 40 for a day pass and € 10 for the discounted rate.
+        <h3>If I register and am not able to attend, can I get a refund?</h3>
+        <p>
+          Our entire ticketing is handled by Yurplan, so you can cancel your tickets under the conditions defined by Yurplan. After the date of the event, no refund will be made.
+        </p>
+        <h3>I have registered but am unable to attend, can I give it to a friend?</h3>
+        <p>
+	  We can accept registration transfers. If you are aware of the change two weeks before the event, you can inform us so that we change the name on the attendee badge. If you are unable to inform us 2 weeks prior to the event (and are unable to make it), your "friend" must show up with your ticket and he/she will wear the badge registered in your name.
+        </p>
+        <h3>Are presentations recorded?</h3>
+        <p>
+	  All sessions except Codelabs will be recorded and made available on the Youtube channel <a href="http://youtube.com/user/francegdg" target="_blank">GDG France</a>
+        </p>
+        <h3>Are talks in English or French?</h3>
+        <p>
+	  The sessions can be both in English and in French, depending on the speakers chosen. As many speakers are from abroad, some sessions will be in English. These sessions will be indicated with a special icon.
+        </p>
+        <h3>How many presentations are held at the same time?</h3>
+        <p>There will be all day 6 parallel sessions (one session per subject and 2 codelabs)</p>
+        <h3>How long does the CFP?</h3>
+        <p>The Registration is already open and will close on August 31st 2016 at 23:59</p>
+        <h3>My presentation has been accepted, do I still need to buy an Entry ticket/ pass for the conference?</h3>
+        <p>
+	  Each speaker/ team of speakers is given a Free pass.. It is therefore not necessary to buy a ticket. (Whether you are alone or several to present).
+        </p>
+        <h3>My presentation has not been accepted as yet, should I buy my Pass, just in case?</h3>
+        <p>
+	  We will contact all Presenters and we will propose more Presentation slots if necessary to faclitate registration.
+        </p>
+        <h3>When and Where is the event?</h3>
+        <p>
+	  The conference takes place on 9th and 10th November 2016 at the Cité des Congrès in Nantes.
+	</p>
+	<h3>I am organizing a User Group, how can I help you?</h3>
+        <p>
+	  As a User Group, you can help us in several aspects:
+          <ul>
+            <li>By helping us find speakers</li>
+            <li>By broadcasting the event on your network. To facilitate this, we have several elements in the press section for distributing posters and banners at your disposal.</li>
+          </ul>
+        </p>
+
+        <!-- inject:platiniums:html -->
+        <!-- SECTION SPONSORS -->
+<section class="devfest-sponsors mdl-grid ">
+  <div class="">
+    <div class="devfest-sponsors-text  mdl-typography--display-1 mdl-typography--text-center">Platinium Sponsors</div>
+    <div class="mdl-grid devfest-sponsors-platinium">
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="https://www.google.com" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/google.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.epitech.eu/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/epitech.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.zenika.com/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/zenika.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.sqli.com/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/sqli.png" ></a>
+      </div>
+    </div>
+    <div class="mdl-grid devfest-sponsors-platinium">
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.conserto.pro/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/conserto.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.soprasteria.com/fr" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/sopra.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.groupe-creative.fr/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/creative.png" ></a>
+      </div>
+      <div class="mdl-cell mdl-cell--3-col mdl-typography--text-center">
+        <a href="http://www.neo-soft.fr/" target="_NEW"><img class="simple-padding-bottom" src="/images/sponsors/neosoft.png" ></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- endinject -->
+      </div>
+    </div>
+
+
+    <!-- inject:footer:html -->
+     <footer class="mdl-mega-footer">
+    <div class="mdl-mega-footer__middle-section">
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">Who we are ?</h1>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="http://www.gdgnantes.com" target="_NEW">GDG Nantes</a></li>
+          <li><a href="https://developers.google.com" target="_NEW">Google Developers</a></li>
+          <li><a href="mailto:bureau@gdgnantes.com" target="_NEW">Contact us</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">Previous editions</h1>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="http://devfest2015.gdgnantes.com" target="_NEW">Devfest 2015</a></li>
+          <li><a href="http://devfest2014.gdgnantes.com" target="_NEW">Devfest 2014</a></li>
+          <li><a href="http://devfest2013.gdgnantes.com" target="_NEW">Devfest 2013</a></li>
+          <li><a href="http://devfest2012.gdgnantes.com" target="_NEW">Devfest 2012</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">FAQ</h1>
+        <ul class="mdl-mega-footer__link-list">
+          <li><a href="./faq.html">Questions</a></li>
+          <li><a href="./pratique.html">Logistics</a></li>
+          <li><a href="./cod.html">Code of conduct</a></li>
+          <!--<li><a href="./presse.html">They talk about DevFest 2016</a></li>-->
+          <li><a href="./credits.html">Credits</a></li>
+        </ul>
+      </div>
+
+      <div class="mdl-mega-footer__drop-down-section">
+        <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+        <h1 class="mdl-mega-footer__heading">Find DevFest on</h1>
+        <span class="mdl-mega-footer__link-list">
+            <a href="https://twitter.com/devfestnantes" class="devfest-footer-social" title="Twitter" target="_NEW">
+              <img src="/images/social/twitter.png">
+            </a>
+            <a href="https://www.facebook.com/gdgnantes" class="devfest-footer-social" title="Facebook" target="_NEW">
+              <img src="/images/social/facebook.png">
+            </a>
+            <a href="https://plus.google.com/+Gdgnantes" class="devfest-footer-social" title="Google plus" target="_NEW">
+              <img src="/images/social/gplus.png">
+            </a>
+            <a href="https://www.youtube.com/user/francegdg/playlists" class="devfest-footer-social" title="YouTube" target="_NEW">
+              <img src="/images/social/youtube.png">
+            </a>
+            <a href="https://www.flickr.com/photos/129650261@N07/sets/72157661060178192" class="devfest-footer-social" title="Flickr" target="_NEW">
+              <img src="/images/social/flickr.png">
+            </a>
+        </span>
+      </div>
+
+    </div>
+
+    <div class="mdl-mega-footer__bottom-section">
+      <div class="mdl-logo">
+        <img src="/images/gdev.png">
+        &nbsp; Devfest Nantes 2016 - Organized by <a href="http://www.gdgnantes.com" class="devfest-footer-links" target="_NEW"><img src="/images/gdgnantes-small.png"></a>. DevFest 2016 is not organised by <a target="_NEW" class="devfest-footer-links" href="http://www.lego.com/">Lego Group</a>
+      </div>
+    </div>
+
+</footer>
+
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/hellojs/1.13.5/hello.all.min.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/fetch/1.0.0/fetch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.js"></script>
+
+    <!-- endinject -->
+
+
+
+  </main>
+
+
+  <!-- build:js(app/) ../../scripts/main.min.js -->
+  <script async src="/scripts/main-a37c119485.js"></script>
+  <!-- endbuild -->
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-35116426-1', 'auto');
+      ga('send', 'pageview');
+  </script>
+  <script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+  <!-- Built with love using Web Starter Kit -->
+</body>
+
+</html>
