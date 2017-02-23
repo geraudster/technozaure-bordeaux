@@ -1,4 +1,4 @@
-# DevFest Nantes 2016 website
+# Technozaure Bordeaux website
 
 ## Overview
 
