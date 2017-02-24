@@ -12,7 +12,7 @@ Based on [Web Starter Kit](https://developers.google.com/web/starter-kit) using 
 
 ## Quickstart
 
-### development
+### Development
 
 You need npm to resolve dependencies :
 ```bash
@@ -30,6 +30,16 @@ Generate production-ready distribution :
 ```bash
 gulp
 ```
+
+## TZ Bordeaux
+
+Here is the list of steps required to update the site for a new edition :
+
+  1. update the file `app/assets/devfest.json` (use the response from ZenApp to get the information)
+  2. update event date in `app/index.html`
+  3. update event details in `app/speakers.html`
+  4. update date in `app/scripts/utils.js` (function `getDayLabel`, only needed for `case 1`)
+  5. commit
 
 ## Web Performance
 
