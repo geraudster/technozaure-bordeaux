@@ -159,9 +159,14 @@
       "firstname": "Eric",
       "name": "Briand",
       "company": null,
-      "bio": "",
+      "bio": "Eric développeur Java/J2EE full-stack chez Zenika Nantes. Il aime travailler sur toutes les couches d'une application web, de la base de données jusqu'au front en utilisant aussi bien des technologies qui ont fait leur preuve que des technologies de pointe. Très intéressé par les technologies Cloud (PAAS & IAAS). Il est formateur officiel Docker et co-organisateur du Docker Meetup Nantes.",
       "photo": "ebriand.jpg",
       "social": {
+        "twitter": "@eric_briand",
+        "googleplus": null,
+        "blog": null,
+        "github": null,
+        "linkedin": null
       },
       "sessions": [5]
     },
