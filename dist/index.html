@@ -1,47 +1,80 @@
 <!doctype html>
 <html lang="">
   <head>
+    <!-- inject:head:html -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="La Technozaure c'est une journée de conférences internes Zenika">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technozaure Zenika Bordeaux</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Team @ GDG Nantes">
+<meta name="description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="keywords" content="event, gdg, devfest, google, programming, android, chrome, developers, nantes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technozaure Zenika Bordeaux</title>
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="/favicon.ico" />
+<!-- Disable tap highlight on IE -->
+<meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Social: Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@ZenikaBordeaux">
-    <meta name="twitter:title" content="Technozaure Zenika Bordeaux 2017">
-    <meta name="twitter:description" content="La Technozaure c'est une journée de conférences internes Zenika">
-    <meta name="twitter:image:src" content="https://tz-bordeaux.appspot.com/images/sharing.png">
+<!-- Web Application Manifest -->
+<link rel="manifest" href="manifest.json">
 
-    <!-- Social: Facebook / Open Graph -->
-    <meta property="og:title" content="Technozaure Zenika Bordeaux 2017" />
-    <meta property="og:site_name" content="Technozaure Zenika Bordeaux 2017" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tz-bordeaux.appspot.com" />
-    <meta property="og:image" content="https://tz-bordeaux.appspot.com/images/sharing.png" />
-    <meta property="og:description" content="La Technozaure c'est une journée de conférences internes Zenika" />
+<!-- favicon -->
+<link rel="icon" type="image/png" href="/favicon.ico" />
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <link rel="canonical" href="https://tz-bordeaux.appspot.com">
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="DevFest Nantes 2016">
+<link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
 
-    <link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
-    <!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
-    <link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="DevFest Nantes 2016">
+<link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
 
-    <!-- Material Design icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+<!-- Tile icon for Win8 (144x144 + tile color) -->
+<meta name="msapplication-TileImage" content="/images/touch/ms-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileColor" content="#2b5797">
 
-    <!-- Your styles -->
-    <link rel="stylesheet" href="/styles/app-56e8985aea.css">
+<!-- Color the status bar on mobile devices -->
+<meta name="theme-color" content="#2b5797">
 
-    <script src="/scripts/material-d8f93ed01e.min.js"></script>
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@devfestnantes">
+<meta name="twitter:title" content="DevFest Nantes 2016">
+<meta name="twitter:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes">
+<meta name="twitter:image:src" content="https://devfest.gdgnantes.com/images/sharing.png">
 
+<!-- Social: Facebook / Open Graph -->
+<meta property="og:title" content="DevFest Nantes 2016" />
+<meta property="og:site_name" content="DevFest Nantes 2016" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://devfest.gdgnantes.com" />
+<meta property="og:image" content="https://devfest.gdgnantes.com/images/sharing.png" />
+<meta property="og:description" content="Le DevFest Nantes 2016, ce sont 2 journées de conférences accueillant 1000 développeurs à la Cité des Congrès de Nantes" />
 
+<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+<link rel="canonical" href="https://devfest.gdgnantes.com">
+
+<link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type=text/css>
+<!-- Material Design Lite page styles: choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html -->
+<link rel="stylesheet" href="/styles/material-db4185c6d5.indigo-red.min.css">
+
+<!-- Material Design icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<!--<script src="https://use.fontawesome.com/f991c55420.js"></script>-->
+
+<!-- Your styles -->
+<link rel="stylesheet" href="/styles/app-56e8985aea.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.4/dialog-polyfill.min.css">
+<script src="/scripts/material-d8f93ed01e.min.js"></script>
+<!--<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>-->
+
+<script>
+  var language = 'fr'
+</script>
+
+    <!-- endinject -->
   </head>
 
   <body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -58,13 +91,6 @@
           </div>
 
           <div style="display:flex;">
-            <div style="display:flex;flex-direction:column;margin-right: 50px;" class="mdl-cell--hide-phone">
-              <h6>Jours</h6>
-              <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="day1">
-                <input type="checkbox" id="day1" value="day1" v-model="day1" class="mdl-checkbox__input">
-                <span class={{this.getTypeColor('day1')}}>Vendredi 28 Octobre</span>
-              </label>
-            </div>
             <div style="display:flex;flex-direction:column;margin-right: 50px;" class="mdl-cell--hide-phone">
               <h6>Type de session</h6>
               <label v-for="filter in typeFilters" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for={{filter}}>
@@ -89,7 +115,7 @@
 
           </div>
 
-          <h4 v-if="day1 || (!day1 && !day2)">Vendredi 28 Octobre 2016</h4>
+          <h4 v-if="day1 || (!day1 && !day2)">Vendredi 10 mars 2017</h4>
           <agenda  v-if="day1 || (!day1 && !day2)" day="1" :hours="agenda.day1" :sessions="displayedSessions" :favorites="favorites"></agenda>
 
       </div>

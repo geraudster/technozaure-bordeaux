@@ -2,386 +2,194 @@
   "agenda": {
     "day1" : [
       {"id" : 1, "label": "9h00"},
-      {"id" : 2, "label": "9h15"},
-      {"id" : 3, "label": "10h15"},
-      {"id" : 4, "label": "11h10"},
-      {"id" : 5, "label": "11h20"},
-      {"id" : 6, "label": "11h45"},
-      {"id" : 7, "label": "12h10"},
-      {"id" : 8, "label": "12h30"},
-      {"id" : 9, "label": "13h45"},
-      {"id" : 10, "label": "15h45"},
-      {"id" : 11, "label": "16h00"},
-      {"id" : 12, "label": "16h25"},
-      {"id" : 13, "label": "17h15"},
-      {"id" : 14, "label": "17h40"},
-      {"id" : 15, "label": "18h00"}
+      {"id" : 2, "label": "9h30"},
+      {"id" : 3, "label": "10h00"},
+      {"id" : 4, "label": "11h30"},
+      {"id" : 5, "label": "12h20"},
+      {"id" : 6, "label": "12h35"},
+      {"id" : 7, "label": "13h35"},
+      {"id" : 8, "label": "14h10"},
+      {"id" : 9, "label": "17h15"},
+      {"id" : 10, "label": "18h00"}
     ]
   },
   "sessions": [
     {
       "id": 1,
-      "name": "Ouverture des portes",
+      "name": "Accueil / petit déjeuner",
       "image": "/images/agenda/open.png",
-      "track": "Technozaure",
+      "track": "Bordeaux",
       "agenda" : { "day": 1, "hour": 1 }
-    },{
-      "id": 8,
-      "name": "Déjeuner",
-      "type": "repas",
-      "image": "/images/agenda/eat.png",
-      "track": "Technozaure",
-      "agenda" : { "day": 1, "hour": 8, "room": 1 }
-    },{
-      "id": 4,
-      "name": "Pause",
-      "type": "café",
-      "image": "/images/agenda/coffee.png",
-      "agenda" : { "day": 1, "hour": 4 }
-    },{
-      "id": 10,
-      "name": "Pause",
-      "type": "café",
-      "image": "/images/agenda/coffee.png",
-      "agenda" : { "day": 1, "hour": 10 }
-    },{
-      "id": 15,
-      "name": "Fin de la journée",
-      "type": "after",
-      "track": "Technozaure",
-      "image": "/images/agenda/after.png",
-      "agenda" : { "day": 1, "hour": 15 }
     },
     {
       "id": 2,
-      "name": "Cloud patterns",
-      "description": "Connaissez-vous les 12-factor apps ? Au travers de ce talk, nous expliquerons les différents patterns pour réaliser une application moderne 'Cloud Ready' en 2016.",
-      "difficulty": 2,
-      "type": "conference",
-      "track": "cloud",
+      "name": "Keynote d'ouverture",
+      "type": "keynote",
+      "track": "Bordeaux",
       "agenda" : { "day": 1, "hour": 2 },
-      "speaker":[
-        2
-      ]
+      "speaker": [1, 2]
     },
     {
       "id": 3,
-      "name": "GraphQL vs Falcor",
-      "description": "L’hégémonie de l’architecture REST est ébranlée par de nouveaux venus : GraphQL de Facebook et Falcor de Netflix. Comment ces deux technologies peuvent-elles nous aider à développer des applications web plus rapidement ?<br /><br />Nous commencerons par une rapide introduction de GraphQL et Falcor : le concept qui se cache derrière, leurs objectifs, ainsi que leur place dans nos architectures client-serveur.<br /><br />Nous vous proposerons ensuite de développer une application mobile de transport en commun avec REST, GraphQL et Falcor afin de comparer l’impact de ces technologies sur les propriétés du code et les coûts de développement. Cette comparaison sera assistée par un outil de traduction de requêtes, conçu par nos soins.",
-      "difficulty": 2,
+      "name": "ELK, dis-moi ce qu'il y a dans mon assiette",
+      "description": "La qualité sanitaire de nos aliments est un sujet qui nous préoccupe de plus en plus. On a pu le voir ces dernières années avec les enchaînements de crises sanitaires autour de la vache folle, la grippe aviaire, les OGMs, les allergènes et plus récemment la découverte de produits potentiellement cancérogènes comme le dioxyde de titane.\n\n[OpenFoodFacts](https://fr.openfoodfacts.org/data) est une base de données recensant plusieurs milliers d'aliments (pâtes, biscuits, épicerie, bonbons...) disponibles dans le commerce. Cette base est libre d'accès sous licence Open Database License et contient pour chaque aliment des caractéristiques telles que :\n\n* la description\n* les ingrédients\n* les additifs\n\nSous forme d'atelier, les participants apprendront à charger les données dans Elasticsearch à l'aide de Logstash. Puis ils créeront leurs dashboards afin par exemple de recenser les catégories de produits les plus allergènes, ou lister les produits dont le E171 entre dans la composition...",
       "type": "conference",
-      "track": "web",
-      "speaker": [
-        31,
-        32
-      ],
-      "agenda" : { "day": 1, "hour": 3, "room": 1 }
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 3 },
+      "speaker": [3]
+    },
+    {
+      "id": 4,
+      "name": "Lean Management & Management Agile",
+      "description": "LEAN/AGILE, les 2 faces d'une même pièce? Comment cela se traduit pour les équipes?",
+      "type": "conference",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 4 },
+      "speaker": [4, 5]
     },
     {
       "id": 5,
-      "name": "Atterrir sur Mars avec un algo génétique",
-      "description": "",
-      "references": null,
-      "difficulty": 1,
+      "name": "Kill mutants, save your code!",
       "type": "quickie",
-      "track": "discovery",
-      "speaker": [
-        5
-      ],
-      "agenda" : { "day": 1, "hour": 5, "room": 1 }
+      "description": "Les mutants attaquent et ils en veulent à votre code ! Ils exploitent chaque faille de votre couverture de code et l’expose au grand jour ! Mais grâce à PIT, vous allez pouvoir y remédier très vite et contrecarrer cette invasion ! Vos tests unitaires seront challengés et évoluerons pour devenir plus pertinents. Les mutants n’auront qu’à bien se tenir !\n\nLors de cette session, nous parlerons des principes du mutation testing et montrerons son application directe avec PIT, framework de mutation testing Java. Nous utiliserons des tests unitaires plus ou moins pertinents pour etudier la manière dont les mutations mettent en évidence et ciblent les carences des tests.",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 5 },
+      "speaker": [6]
     },
     {
       "id": 6,
-      "name": "MinuteJS - Les nouveautés Javascript à ne pas rater !",
-      "description": "Si toi aussi tu ne comprends plus rien aux dernières mises à jour de Javascript, alors <b>ce talk est fait pour toi</b> !<br /><br />Comment ça fonctionne ? Quelles sont les nouveautés ? Pourquoi certaines personnes les utilisent alors que ce n'est pas officiellement sorti ?<br />Pourquoi j'en entends moins parler ?<br /><br />Dans ce <b>Quickie</b> vous aurez réponses à ces questions. Nous allons revoir la façon dont ECMAScript (et donc Javascript) évolue.<br />Je vous présenterai quelques nouveautés depuis l'ES6 (ES2015) qui me semblent intéressantes et applicables dès à présent via une comparaison avant/après et du <b>livecoding</b>.<br /><br />Je vous persuaderai que ces nouveautés vous feront gagner du temps et de la lisibilité !",
-      "difficulty": 1,
-      "type": "quickie",
-      "track": "web",
-      "speaker": [
-        6
-      ],
-      "agenda" : { "day": 1, "hour": 6, "room": 1 }
+      "name": "PAUSE DEJEUNER",
+      "image": "/images/agenda/eat.png",
+      "type": "repas",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 6 }
     },
     {
       "id": 7,
-      "name": "React-Native web, ou comment partager son code sur toutes les plateformes",
-      "description": "",
-      "difficulty": 1,
+      "name": "En route vers le continuous delivery : les TAA",
+      "description": "L’hégémonie de l’architecture REST est ébranlée par de nouveaux venus : GraphQL de Facebook et Falcor de Netflix. Comment ces deux technologies peuvent-elles nous aider à développer des applications web plus rapidement ?<br /><br />Nous commencerons par une rapide introduction de GraphQL et Falcor : le concept qui se cache derrière, leurs objectifs, ainsi que leur place dans nos architectures client-serveur.<br /><br />Nous vous proposerons ensuite de développer une application mobile de transport en commun avec REST, GraphQL et Falcor afin de comparer l’impact de ces technologies sur les propriétés du code et les coûts de développement. Cette comparaison sera assistée par un outil de traduction de requêtes, conçu par nos soins.",
       "type": "quickie",
-      "track": "web",
-      "speaker": [
-        7
-      ],
-      "agenda" : { "day": 1, "hour": 7, "room": 1 }
+      "track": "Bordeaux",
+      "speaker": [7],
+      "agenda" : { "day": 1, "hour": 7 }
+    },
+    {
+      "id": 8,
+      "name": "A la découverte des algorithmes génétiques",
+      "description": "On entend souvent parlé des algorithmes génétiques. Ils sont utilisés dans de nombreux domaines et par de nombreux logiciels qu'on utilise couramment. A travers cet atelier, je vous propose de vous présenter le fonctionnement d'un algorithme génétique ainsi que quelques stratégies d'optimisation. Ensuite, vous développerez un algorithme génétique par équipe afin de mettre en pratique vos connaissances. \n\nAfin de rendre le tout plus fun, les algorithmes devront optimiser un véhicule participant à une course opposant toutes les équipes. Il n'y aura qu'un champion par équipe et évidemment, à la fin, il n'en restera qu'un !\n\nHappy coding :-)",
+      "type": "codelab",
+      "speaker": [2],
+      "agenda" : { "day": 1, "hour": 8 }
     },
     {
       "id": 9,
-      "name": "Développer une application de pari en ligne avec la blockchain Ethereum et Angular2",
-      "description": "Dans ce CodeLab, nous commencerons par une présentation de la blockchain Ethereum et du principe des smart-contracts.<br />Puis nous développerons une Dapp basique de pari en ligne en utilisant les technologies Geth, EthereumJS et Angular2.<br /><br />Cela permettra d'apprendre :<br />- à mettre en place une blockchain de test privée multi-noeuds,<br />- à installer et utiliser l'écosystème de développement Ethereum,<br />- à coder un smart-contract avec Solidity (avec quelques bonnes pratiques),<br />- à interfacer ce smart contract avec une IHM Web en Angular2.<br /><br />Des connaissances du fonctionnement des concepts généraux des blockchains sont fortement conseillées pour CodeLab, même si je ferais quelques rappels au début.<br />Par contre, pas besoin de connaître Ethereum, et la partie Angular2 sera fournie dans les grandes lignes aux participants.",
-      "difficulty": 2,
-      "type": "codelab",
-      "track": "discovery",
-      "speaker": [
-        9
-      ],
-      "agenda" : { "day": 1, "hour": 9, "room": 1 }
+      "name": "Keynote de fermeture",
+      "type": "keynote",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 9 },
+      "speaker": [8]
     },
     {
-      "id": 11,
-      "name": "La spécification WebComponents et quels avantages par rapport aux frameworks JS",
-      "description": "",
-      "difficulty": 1,
-      "type": "quickie",
-      "track": "web",
-      "speaker": [
-        11
-      ],
-      "agenda" : { "day": 1, "hour": 11, "room": 1 }
-    },
-    {
-      "id": 12,
-      "name": "Advanced React",
-      "description": "",
-      "difficulty": 1,
-      "type": "conference",
-      "track": "web",
-      "speaker": [
-        12
-      ],
-      "agenda" : { "day": 1, "hour": 12, "room": 1 }
-    },
-    {
-      "id": 13,
-      "name": "Myers Briggs Type Indicator ou MBTI ! Ce truc est génial !",
-      "description": "",
-      "difficulty": 1,
-      "type": "quickie",
-      "track": "discovery",
-      "speaker": [
-        13
-      ],
-      "agenda" : { "day": 1, "hour": 13, "room": 1 }
-    },
-    {
-      "id": 14,
-      "name": "Progressive Web Apps, le futur ? ",
-      "description": "",
-      "difficulty": 1,
-      "type": "quickie",
-      "track": "web",
-      "speaker": [
-        14
-      ],
-      "agenda" : { "day": 1, "hour": 14, "room": 1 }
+      "id": 10,
+      "name": "Fin de la journée",
+      "type": "after",
+      "track": "Bordeaux",
+      "image": "/images/agenda/after.png",
+      "agenda" : { "day": 1, "hour": 10 }
     }
   ],
   "speakers": [
     {
-      "id": 12,
-      "firstname": "Benjamin",
-      "name": "Petetot",
+      "id": 1,
+      "firstname": "Fabien",
+      "name": "Cousy",
       "company": null,
       "bio": "",
-      "photo": "bpetetot.jpg",
+      "photo": "default.jpg",
       "social": {
       },
-      "sessions": [
-        12
-      ]
+      "sessions": [1]
     },
     {
-      "id": 13,
-      "firstname": "Antoine",
-      "name": "Bonneau",
+      "id": 2,
+      "firstname": "Sébastien",
+      "name": "Descamps",
       "company": null,
       "bio": "",
-      "photo": "abonneau.jpg",
+      "photo": "sdescamps.jpg",
       "social": {
       },
-      "sessions": [
-        13
-      ]
+      "sessions": [1, 8]
     },
     {
-      "id": 14,
-      "firstname": "Valentin",
-      "name": "Ménard",
+      "id": 3,
+      "firstname": "Géraud",
+      "name": "Duge De Bernonville",
       "company": null,
       "bio": "",
-      "photo": "vmenard.jpg",
+      "photo": "default.jpg",
       "social": {
       },
-      "sessions": [
-        14
-      ]
+      "sessions": [4]
     },
     {
-      "id": 50,
-      "firstname": "Guillaume",
-      "name": "Membré",
+      "id": 4,
+      "firstname": "Mathilde",
+      "name": "Gautier",
       "company": null,
-      "bio": "Geek à toute heure, Guillaume Membré travaille principalement autour des technologies Java/JavaEE mais aussi sur des problématiques d'intégration continue, de qualimétrie. Mission après mission sur Nantes, il a eu l'occasion d'avoir une expérience diversifiée qui l'a amenée à occuper différentes responsabilités, à faire dèv et de l'infra, et maintenant de la mise en place d'outils devops.",
-      "photo": "gmembre.jpg",
+      "bio": "",
+      "photo": "default.jpg",
       "social": {
-        "twitter": "@GuillaumeMembre",
-        "googleplus": null,
-        "github": null,
-        "blog": "http://www.monbook.tech"
       },
-      "sessions": [
-        
-      ]
-    },
-    {
-      "id": 31,
-      "firstname": "Hugo",
-      "name": "Wood",
-      "company": null,
-      "bio": "Développeur autodidacte depuis 12 ans, professionnel depuis 3, je n'ai de cesse d'apprendre de nouvelles techniques pour améliorer mon savoir-faire. J'aime étudier les langages, de C# à Haskell. Au quotidien, ce sont Java et JavaScript qui m'accaparent. Je suis consultant et formateur chez Zenika. Enfin, j'apprécie les jeux de code : vous me retrouverez par exemple sur CodinGame, et là, c'est Python.",
-      "photo": "hwood.jpg",
-      "social": {
-        "twitter": "@mercury_wood",
-        "googleplus": null,
-        "github": "hgwood"
-      },
-      "sessions": [
-        3
-      ]
+      "sessions": [4]
     },
     {
       "id": 5,
-      "firstname": "Nicolas",
-      "name": "Lepage",
+      "firstname": "Frédéric",
+      "name": "Faure",
+      "company": null,
+      "bio": "",
+      "photo": "default.jpg",
+      "social": {
+      },
+      "sessions": [4]
+    },
+    {
+      "id": 6,
+      "firstname": "Eric",
+      "name": "Briand",
+      "company": null,
+      "bio": "",
+      "photo": "ebriand.jpg",
+      "social": {
+      },
+      "sessions": [5]
+    },
+    {
+      "id": 7,
+      "firstname": "Marc",
+      "name": "Abou Chacra",
       "company": null,
       "bio": "",
       "photo": "default.jpg",
       "social": {
         "twitter": null,
         "googleplus": null,
-        "github": null
+        "github": null,
+        "linkedin": null
       },
-      "sessions": [
-        5
-      ]
+      "sessions": [6]
     },
     {
-      "id": 7,
-      "firstname": "Mathias",
-      "name": "Bernardeau",
+      "id": 8,
+      "firstname": "Surprise",
+      "name": "",
       "company": null,
       "bio": "",
-      "photo": "mbernardeau.jpg",
+      "photo": "default.jpg",
       "social": {
-        "twitter": null,
-        "googleplus": null,
-        "github": null,
-        "linkedin": null
       },
-      "sessions": [
-        7
-      ]
-    },
-    {
-      "id": 9,
-      "firstname": "Benjamin",
-      "name": "Fontaine",
-      "company": null,
-      "bio": "Je suis un dév fullstack Java et Js, curieux de tout : devops, nouvelles technologies, agilité, craftmanship, développement personnel.",
-      "photo": "bfontaine.jpg",
-      "social": {
-        "twitter": "@benjifontaine5",
-        "googleplus": "https://plus.google.com/100218727706940554885",
-        "github": "https://github.com/benjaminfontaine"
-      },
-      "sessions": [
-        9
-      ]
-    },
-    {
-      "id": 6,
-      "firstname": "Fabien",
-      "name": "Juif",
-      "company": null,
-      "bio": "Fabien JUIF a baigné dans l’informatique depuis son adolescence. Il installait sa première Gentoo stage 1 en 1ère pour migrer vers Archlinux quelques années après.<br />Pour lui pacman n’est pas un jeu, on ne rigole pas avec ça.<br /><br />Passioné par la création de jeux vidéos, il s’intéressa très rapidement au développement logiciel. Avec 6 années dans le métier et une veille technologique personnelle depuis son plus jeune âge, il est devenu un peu touche à tout <i>GNU+Linux, Docker, développement backend, développement frontend, etc</i><br /><br />Chez Zenika, son attrait du moment c'est le Web, et plus précisément le développement ReactJS.<br /><br />Il espère pouvoir partager un peu de sa passion avec vous !",
-      "photo": "fjuif.jpg",
-      "social": {
-        "twitter": null,
-        "googleplus": null,
-        "github": "fabienjuif"
-      },
-      "sessions": [
-        6
-      ]
-    },
-    {
-      "id": 11,
-      "firstname": "Yvonnick",
-      "name": "Frin",
-      "company": null,
-      "bio": "Yvonnick développeur javascript chez Zenika Nantes. Curieux et passionné, il aime découvrir les dernières technologies du Web. Adepte d’AngularJs depuis déjà deux ans, il se met à explorer le Flux avec React. Social, il écume les meetups nantais en quête de nouveautés.",
-      "photo": "yfrin.jpg",
-      "social": {
-        "twitter": "@YvonnickFrin",
-        "googleplus": null,
-        "github": "https://github.com/frinyvonnick"
-      },
-      "sessions": [
-        11
-      ]
-    },
-    {
-      "id": 32,
-      "firstname": "Antoine",
-      "name": "Cellier",
-      "company": null,
-      "bio": "Consultant chez Zenika Nantes. J'interviens sur des missions de réalisation autour des technos front et back tel que AngularJS, ReactJS et Spring. Passionné par l’écosystème technique dans lequel je travaille je participe régulièrement aux meetups Nantais et donne des talks lors de différents événement (NantesJS, Voxxed Luxembourg, Nantes JUG, bdx.io)",
-      "photo": "acellier.jpg",
-      "social": {
-        "twitter": "@AntoineCellier3",
-        "googleplus": null,
-        "blog": null,
-        "github": null,
-        "linkedin": "https://www.linkedin.com/in/antoine-cellier-34b69954"
-      },
-      "sessions": [
-        3
-      ]
-    },
-    {
-      "id": 51,
-      "firstname": "Eric",
-      "name": "Briand",
-      "company": null,
-      "bio": "Eric développeur Java/J2EE full-stack chez Zenika Nantes. Il aime travailler sur toutes les couches d'une application web, de la base de données jusqu'au front en utilisant aussi bien des technologies qui ont fait leur preuve que des technologies de pointe. Très intéressé par les technologies Cloud (PAAS & IAAS). Il est formateur officiel Docker et co-organisateur du Docker Meetup Nantes.",
-      "photo": "ebriand.jpg",
-      "social": {
-        "twitter": "@eric_briand",
-        "googleplus": null,
-        "blog": null,
-        "github": null,
-        "linkedin": null
-      },
-      "sessions": [
-        
-      ]
-    },
-    {
-      "id": 2,
-      "firstname": "Julien",
-      "name": "Landuré",
-      "company": null,
-      "bio": "CTO de Zenika Nantes, Julien navigue entre des missions de formation (Docker, AngularJS, PaaS) et d’architecture. Issu de la génération Google, il a co-fondé en Janvier 2011 le GDG Nantes, participe depuis 5 ans au Google I/O et organise le DevFest Nantes.",
-      "photo": "jlandure.jpg",
-      "social": {
-        "twitter": "@jlandure",
-        "googleplus": "https://plus.google.com/+JulienLandur%C3%A9",
-        "blog": null,
-        "github": null,
-        "linkedin": null
-      },
-      "sessions": [
-        2
-      ]
+      "sessions": [9]
     }
   ]
 }

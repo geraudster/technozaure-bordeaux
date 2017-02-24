@@ -3,7 +3,7 @@
   "scripts/material.min.js": "scripts/material-d8f93ed01e.min.js",
   "scripts/sw/runtime-caching.js": "scripts/sw/runtime-caching-e3e34dcb62.js",
   "scripts/sw/sw-toolbox.js": "scripts/sw/sw-toolbox-2770efb889.js",
-  "service-worker.js": "service-worker-20178d3e4d.js",
+  "service-worker.js": "service-worker-f62debbbf7.js",
   "styles/app.css": "styles/app-56e8985aea.css",
   "styles/material.indigo-red.min.css": "styles/material-db4185c6d5.indigo-red.min.css",
   "styles/socials.css": "styles/socials-f495f8be77.css",
