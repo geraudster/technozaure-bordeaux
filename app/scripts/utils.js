@@ -100,7 +100,7 @@ var getDayLabel = function getDayLabel(day) {
     case 2:
       return language === 'en' ? 'Thursday, November 10th' : 'Jeudi 10 novembre';
     case 1:
-      return language === 'en' ? 'Wednesday, November 9th' : 'Mercredi 9 novembre';
+      return language === 'en' ? 'Wednesday, November 9th' : 'Vendredi 10 mars';
   }
 };
 
