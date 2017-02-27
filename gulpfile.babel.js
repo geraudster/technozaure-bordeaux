@@ -37,7 +37,9 @@ import pkg from './package.json';
 import revReplace from 'gulp-rev-replace';
 import rev from 'gulp-rev';
 import responsive from 'gulp-responsive';
-
+import jsonTransform from 'gulp-json-transform';
+import beautify from 'gulp-beautify';
+import rename from 'gulp-rename';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -402,3 +404,110 @@ gulp.task('revreplace', ['revreplace-yaml'], () => {
     .pipe(revReplace({manifest: manifest}))
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('import', function() {
+  gulp.src('./zenapp.json')
+  .pipe(jsonTransform(function(data, file) {
+    const sessions = makeSessions(data.callForPapers);
+    const speakers = makeSpeakers(data.callForPapers, sessions);
+    const agenda = makeAgenda(sessions);
+    
+    return {
+      agenda,
+      sessions,
+      speakers
+    };
+  }))
+  .pipe(rename('devfest.json'))
+  .pipe(beautify())
+  .pipe(gulp.dest('./app/assets/'));
+});
+
+const makeSessions = function(callForPapers) {
+  const sessions = [
+    {
+      "id": 1,
+      "name": "Accueil / petit déjeuner",
+      "image": "/images/agenda/open.png",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 1 }
+    },
+    {
+      "id": 2,
+      "name": "Keynote d'ouverture",
+      "type": "keynote",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 2 },
+      "speaker": []
+    },
+    {
+      "id": 9,
+      "name": "Keynote de fermeture",
+      "type": "keynote",
+      "track": "Bordeaux",
+      "agenda" : { "day": 1, "hour": 9 },
+      "speaker": []
+    },
+    {
+      "id": 10,
+      "name": "Fin de la journée",
+      "type": "after",
+      "track": "Bordeaux",
+      "image": "/images/agenda/after.png",
+      "agenda" : { "day": 1, "hour": 10 }
+    }];
+
+    Array.prototype.push.apply(sessions, callForPapers.map(makeSession));
+
+    return sessions;
+};
+
+const makeSession = function(callForPaper) {
+  return {
+    id: callForPaper.id,
+    name: callForPaper.title,
+    type: 'conference',
+    track: 'Bordeaux',
+    agenda: { 'day': 1, 'hour': 1 },
+    speaker: makeSpeaker(callForPaper, person => person.id)
+  };
+};
+
+const makeSpeaker = function(callForPaper, mapper) {
+  if (callForPaper.speakers && callForPaper.speakers.length > 0) {
+    return callForPaper.speakers.map(mapper);
+  } else {
+    return Array.of(mapper(callForPaper.submittedBy));
+  }
+};
+
+const makeSpeakers = function(callForPapers, sessions) {
+  const mapper = function(person) {
+    const speakerSessions = sessions
+      .filter(session => session.speaker && session.speaker.some(speaker => speaker == person.id))
+      .map(session => session.id);
+
+    return {
+      id: person.id,
+      firstname: person.firstName,
+      name: person.lastName,
+      company: null,
+      bio: "",
+      photo: "default.jpg",
+      social: {
+        twitter: null,
+        googleplus: null,
+        github: null,
+        linkedin: null
+      },
+      sessions: speakerSessions
+    };
+  };
+  return callForPapers.map(callForPaper => makeSpeaker(callForPaper, mapper));
+};
+
+const makeAgenda = function(sessions) {
+  return {
+    day1 : sessions.map(session => ({ id: session.id, label: '9h00' }))
+  };
+}

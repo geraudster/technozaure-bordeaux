@@ -35,11 +35,13 @@ gulp
 
 Here is the list of steps required to update the site for a new edition :
 
-  1. update the file `app/assets/devfest.json` (use the response from ZenApp to get the information)
-  2. update event date in `app/index.html`
-  3. update event details in `app/speakers.html`
-  4. update date in `app/scripts/utils.js` (function `getDayLabel`, only needed for `case 1`)
-  5. commit
+  1. save the conference response from ZenApp in `zenapp.json` file (go to ZenApp>Conférences in footer menu)
+  2. run `gulp import` to transform the ZenApp response into the required `app/assets/devfest.json` file
+  3. update the file `app/assets/devfest.json` to correctly set agenda, sessions hours and delete useless sessions
+  4. update event date in `app/index.html`
+  5. update event details in `app/speakers.html`
+  6. update date in `app/scripts/utils.js` (function `getDayLabel`, only needed for `case 1`)
+  7. commit
 
 ## Web Performance
 
