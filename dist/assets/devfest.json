@@ -127,8 +127,8 @@
       "firstname": "Géraud",
       "name": "Duge De Bernonville",
       "company": null,
-      "bio": "",
-      "photo": "default.jpg",
+      "bio": "Géraud est consultant Big Data chez Zenika Bordeaux. Issu du monde JavaEE, il a pris goût à la data et aime mettre en oeuvre les architectures permettant le traitement de données à grande échelle. Passioné des technologies autour d'Hadoop, Spark et autres technos NoSQL, il s'intéresse également de près au Machine Learning (avec des mises en oeuvres en Spark, R et H2O). Il donne également des formations sur les sujets Big Data.",
+      "photo": "gdugedebernonville.jpg",
       "social": {
       },
       "sessions": [4]
